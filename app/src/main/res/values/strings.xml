@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FeedApp</string>
+    <string name="todo">TODO</string>
+    <string name="online">Установлено соединение</string>
+    <string name="offline">Нет сети</string>
+    <string name="load">Загрузить</string>
+    <string name="rss">RSS:</string>
+    <string name="ok">OK</string>
+    <string name="default_url">"https://news.tut.by/rss"</string>
+    <string name="no_rss">канал не выбран</string>
+</resources>

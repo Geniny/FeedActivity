@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:id="@+id/root"
+    android:focusableInTouchMode="true">
+
+    <FrameLayout
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionDone"
+            android:id="@+id/rss_edit"
+            android:text="@string/default_url"
+            android:hint="@string/rss"
+            android:inputType="textUri"
+            android:textColor="@color/colorAccent"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/no_rss"
+            android:id="@+id/rss_name"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:textStyle="bold"
+            />
+
+    </FrameLayout>
+    <!--Можно обновить прокручиванием вверх-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/swipe_refresh">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/article_layout"
+        android:id="@+id/list_view"
+        />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>
