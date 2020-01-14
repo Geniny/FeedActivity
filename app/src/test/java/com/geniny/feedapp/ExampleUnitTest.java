@@ -1,4 +1,4 @@
-package com.artisanter.feedapp;
+package com.geniny.feedapp;
 
 import org.junit.Test;
 

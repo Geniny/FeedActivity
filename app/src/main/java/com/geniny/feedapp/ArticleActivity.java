@@ -1,4 +1,4 @@
-package com.artisanter.feedapp;
+package com.geniny.feedapp;
 
 
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -9,7 +9,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import java.util.Objects;
 
-public class RecordActivity extends BaseActivity {
+public class ArticleActivity extends BaseActivity {
 
     private String link;
     private SwipeRefreshLayout refreshLayout;

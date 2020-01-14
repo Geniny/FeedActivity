@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.artisanter.feedapp">
+    package="com.geniny.feedapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name=".App"
+        android:name="com.geniny.feedapp.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,10 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".RecordActivity"/>
-<!--        <activity android:name=".ArticleActivity" />-->
-        <activity android:name=".BaseActivity" />
-        <activity android:name=".MainActivity" >
+        <activity android:name="com.geniny.feedapp.ArticleActivity"/>
+        <activity android:name="com.geniny.feedapp.BaseActivity" />
+        <activity android:name="com.geniny.feedapp.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

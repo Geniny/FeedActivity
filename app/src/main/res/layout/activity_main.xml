@@ -7,7 +7,8 @@
     android:orientation="vertical"
     tools:context=".MainActivity"
     android:id="@+id/root"
-    android:focusableInTouchMode="true">
+    android:focusableInTouchMode="true"
+    android:descendantFocusability="beforeDescendants">
 
     <FrameLayout
         android:focusableInTouchMode="true"
@@ -18,36 +19,39 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:imeOptions="actionDone"
-            android:id="@+id/rss_edit"
-            android:text="@string/default_url"
-            android:hint="@string/rss"
+            android:id="@+id/search"
+            android:text=""
+            android:hint="Адрес RSS-канала"
             android:inputType="textUri"
-            android:textColor="@color/colorAccent"/>
+            android:background="@drawable/border"
+            android:layout_marginBottom="10dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/no_rss"
-            android:id="@+id/rss_name"
-            android:textSize="20sp"
-            android:textColor="@color/colorAccent"
+            android:text="Введите адрес"
+            android:id="@+id/title"
+            android:textSize="25sp"
+            android:textColor="@android:color/holo_orange_dark"
             android:gravity="center"
             android:background="@color/colorPrimary"
             android:textStyle="bold"
+            android:layout_marginBottom="10dp"
             />
 
     </FrameLayout>
-    <!--Можно обновить прокручиванием вверх-->
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:id="@+id/swipe_refresh">
+        android:id="@+id/swipe_refresh"
+        android:background="@android:color/black"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="beforeDescendants">
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/article_layout"
-        android:id="@+id/list_view"
-        />
+        android:id="@+id/list_view"/>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </LinearLayout>

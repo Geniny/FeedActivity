@@ -1,9 +1,8 @@
-package com.artisanter.feedapp;
+package com.geniny.feedapp;
 
 import java.io.Serializable;
 
-// Описание статьи
-class Record implements Serializable  // Помечается как сериализуемый
+class Article implements Serializable
 {
     private String title = "";
     private String description = "";
@@ -45,11 +44,9 @@ class Record implements Serializable  // Помечается как сериа�
         this.date = date;
     }
 
-
     void setGuid(String guid) {
         this.guid = guid;
     }
-
 
     String getPreview() {
         return preview;
